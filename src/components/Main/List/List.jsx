@@ -15,19 +15,8 @@ import { ExpenseTrackerContext } from "../../../context/context";
 
 function List() {
   const classes = useStyles();
-  const transactions = [
-    { id: 1, type: "Income", category: "Salary", amount: 50, date: new Date() },
-    {
-      id: 2,
-      type: "Expense",
-      category: "Business",
-      amount: 10,
-      date: new Date(),
-    },
-    { id: 3, type: "Income", category: "Salary", amount: 50, date: new Date() },
-  ];
 
-  const { deleteTransaction } = useContext(ExpenseTrackerContext);
+  const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
 
   return (
     <MUIList dense={false} className={classes.list}>
@@ -60,7 +49,7 @@ function List() {
               <IconButton
                 edge="end"
                 aria-label="delete"
-                onClick={deleteTransaction}
+                onClick={() => deleteTransaction(transaction.id)}
               >
                 <Delete />
               </IconButton>
