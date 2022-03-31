@@ -18,6 +18,7 @@ import {
 } from "../../../constants/categories";
 import formatDate from "../../../utils/formatDate";
 import { useSpeechContext } from "@speechly/react-client";
+import CustomizedSnackBar from "../../SnackBar/SnackBar";
 
 const initialState = {
   amount: "",
@@ -29,10 +30,13 @@ const initialState = {
 function Form() {
   const classes = useStyles();
   const [formData, setFormData] = useState(initialState);
-  console.log(formData);
-
+  const [open, setOpen] = useState(false);
+  const { segment } = useSpeechContext();
   const { addTransaction } = useContext(ExpenseTrackerContext);
 
+  console.log(formData);
+
+  //create transaction func
   const createTransaction = () => {
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes("-"))
       return;
@@ -42,14 +46,14 @@ function Form() {
       amount: Number(formData.amount),
       id: uuidv4(),
     };
+    setOpen(true);
     addTransaction(transaction);
     setFormData(initialState);
   };
 
+  //changing categories option on the basis of income and expense selected type
   const selectedCategories =
     formData.type === "Income" ? incomeCategories : expenseCategories;
-
-  const { segment } = useSpeechContext();
 
   //setting form data values using the speechly segment intent
   useEffect(() => {
@@ -113,6 +117,7 @@ function Form() {
 
   return (
     <Grid container spacing={2}>
+      <CustomizedSnackBar open={open} setOpen={setOpen} />
       <Grid item xs={12}>
         <Typography align="center" variant="subtitle2" gutterBottom>
           {segment && segment.words.map((w) => w.value).join(" ")}
