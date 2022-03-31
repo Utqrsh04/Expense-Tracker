@@ -9,6 +9,7 @@ import {
   List,
 } from "@material-ui/core";
 import useStyles from "./styles";
+import Form from "./Form/Form";
 
 function Main() {
   const classes = useStyles();
@@ -23,10 +24,10 @@ function Main() {
           variant="subtitle1"
           style={{ lineHeight: "1.5em", marginTop: "20px" }}
         >
-          Try Saying : Some sentaence
+          Try Saying : Heyyyyyyyyyyyyyyyyyyyyyyyyyyyy
         </Typography>
         <Divider />
-        Form
+        <Form />
       </CardContent>
 
       <CardContent className={classes.cardContent}>
