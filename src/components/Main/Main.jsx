@@ -24,7 +24,7 @@ function Main() {
       <CardHeader title={"Expense Tracker"} subheader={"use your voice"} />
       <CardContent>
         <Typography align="center" variant="h5">
-          Total Balance ${balance}
+          Total Balance $ {balance}
         </Typography>
         <Typography
           variant="subtitle1"

@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   desktop: {
@@ -18,8 +18,8 @@ export default makeStyles((theme) => ({
   },
   last: {
     [theme.breakpoints.down("sm")]: {
-      marginBottom: theme.spacing(2),
-      paddingBottom: "200px",
+      marginBottom: theme.spacing(0),
+      paddingBottom: "20px",
     },
   },
   grid: {
