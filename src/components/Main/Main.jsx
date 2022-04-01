@@ -12,6 +12,7 @@ import { ExpenseTrackerContext } from "../../context/context.js";
 import useStyles from "./styles";
 import Form from "./Form/Form";
 import List from "./List/List";
+import InfoCard from "../InfoCard.jsx";
 
 function Main() {
   const classes = useStyles();
@@ -29,9 +30,9 @@ function Main() {
           variant="subtitle1"
           style={{ lineHeight: "1.5em", marginTop: "20px" }}
         >
-          Try Saying : Heyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+          <InfoCard />
         </Typography>
-        <Divider />
+        <Divider className={classes.divider} />
         <Form />
       </CardContent>
 

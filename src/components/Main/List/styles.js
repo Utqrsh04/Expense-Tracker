@@ -3,7 +3,7 @@ import { red, green } from "@material-ui/core/colors";
 
 export default makeStyles((theme) => ({
   avatarIncome: {
-    color: "#fff",
+    color: "#ffff",
     backgroundColor: green[500],
   },
   avatarExpense: {

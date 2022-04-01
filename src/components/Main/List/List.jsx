@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import useStyles from "./styles";
 import {
   List as MUIList,
   ListItem,
@@ -12,12 +11,13 @@ import {
 } from "@material-ui/core";
 import { Delete, MoneyOff } from "@material-ui/icons";
 import { ExpenseTrackerContext } from "../../../context/context";
+import useStyles from "./styles";
 
 function List() {
   const classes = useStyles();
 
   const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
-
+  console.log(transactions);
   return (
     <MUIList dense={false} className={classes.list}>
       {transactions.map((transaction) => (
