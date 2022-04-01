@@ -13,13 +13,13 @@ import useStyles from "./styles";
 function App() {
   const classes = useStyles();
 
-  const func = () => {
-    var context = new AudioContext();
+  // const func = () => {
+  //   var context = new AudioContext();
 
-    context.resume().then(() => {
-      console.log("Playback Resume");
-    });
-  };
+  //   context.resume().then(() => {
+  //     console.log("Playback Resume");
+  //   });
+  // };
 
   return (
     <div className="">

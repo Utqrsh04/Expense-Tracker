@@ -17,7 +17,7 @@ function List() {
   const classes = useStyles();
 
   const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
-  console.log(transactions);
+  // console.log(transactions);
   return (
     <MUIList dense={false} className={classes.list}>
       {transactions.map((transaction) => (
