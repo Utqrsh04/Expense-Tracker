@@ -34,7 +34,7 @@ function Form() {
   const { segment } = useSpeechContext();
   const { addTransaction } = useContext(ExpenseTrackerContext);
 
-  console.log(formData);
+  // console.log(formData);
 
   //create transaction func
   const createTransaction = () => {
@@ -75,7 +75,7 @@ function Form() {
       }
 
       segment.entities.forEach((e) => {
-        console.log("Entitiles ", e.value);
+        // console.log("Entitiles ", e.value);
         const category = `${e.value.charAt(0)}${e.value
           .slice(1)
           .toLowerCase()}`;

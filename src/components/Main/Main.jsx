@@ -21,10 +21,10 @@ function Main() {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title={"Expense Tracker"} subheader={"use your voice"} />
+      <CardHeader title={"Expense Tracker"} />
       <CardContent>
         <Typography align="center" variant="h5">
-          Total Balance $ {balance}
+          Total Balance {balance} Rupees
         </Typography>
         <Typography
           variant="subtitle1"
@@ -37,7 +37,7 @@ function Main() {
       </CardContent>
 
       <CardContent className={classes.cardContent}>
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
           <Grid item xs={12}>
             <List />
           </Grid>
